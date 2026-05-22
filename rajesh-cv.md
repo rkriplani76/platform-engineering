@@ -1,6 +1,6 @@
 # Rajesh Kriplani
 
-![Rajesh Kriplani](rajesh_photo.jpg)
+<img src="rajesh_photo_passport.jpg" alt="Rajesh Kriplani" width="413" height="531" style="object-fit:cover; border-radius:4px;">
 
 **Chapter Lead | Director | Principal Cloud Architect**  
 📍 Bangalore, India · 📞 +91-9972061878 · 📧 rkriplani76@rediffmail.com  
