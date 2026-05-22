@@ -1,6 +1,6 @@
 # Rajesh Kriplani
 
-![Rajesh Kriplani](rajesh-photo.jpg)
+![Rajesh Kriplani](rajesh_photo.jpg)
 
 **Chapter Lead | Director | Principal Cloud Architect**  
 📍 Bangalore, India · 📞 +91-9972061878 · 📧 rkriplani76@rediffmail.com  
