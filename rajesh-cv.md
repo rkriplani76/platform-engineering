@@ -1,8 +1,11 @@
 # Rajesh Kriplani
 
-<div style="width:150px; height:150px; border-radius:50%; overflow:hidden; display:block; margin:0 auto;">
-    <img src="rajesh_photo.jpg" alt="Rajesh Kriplani" style="width:100%; height:100%; object-fit:cover; display:block;">
-</div>
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto;">
+  <defs>
+    <clipPath id="rk-circle"><circle cx="75" cy="75" r="75" /></clipPath>
+  </defs>
+  <image href="rajesh_photo.jpg" x="0" y="0" width="150" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#rk-circle)" alt="Rajesh Kriplani" />
+</svg>
 
 **Chapter Lead | Director | Principal Cloud Architect**  
 📍 Bangalore, India · 📞 +91-9972061878 · 📧 rkriplani76@rediffmail.com  
