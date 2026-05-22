@@ -4,7 +4,7 @@
   <defs>
     <clipPath id="rk-circle"><circle cx="75" cy="75" r="75" /></clipPath>
   </defs>
-  <image href="rajesh_photo.jpg" x="0" y="0" width="150" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#rk-circle)" alt="Rajesh Kriplani" />
+  <image href="https://github.com/rkriplani76/platform-engineering/raw/main/rajesh_photo.jpg" x="0" y="0" width="150" height="150" preserveAspectRatio="xMidYMid slice" clip-path="url(#rk-circle)" alt="Rajesh Kriplani" />
 </svg>
 
 **Chapter Lead | Director | Principal Cloud Architect**  
@@ -22,9 +22,9 @@
 ---
 
 ## Profile Summary
-Accomplished IT Professional with 24+ years of experience leading enterprise IT projects and teams. Skilled in deploying IT infrastructure, cloud solutions, and managing global operations. Expertise spans IT services, architecture, people management, stakeholder engagement, open-source adoption, negotiation, and achieving results. Led cloud migration initiatives, developed performance testing and configuration management tools, drove container strategy, and completed data centre migration for the Core Technology Group in 18 months. Managed a team supporting 160+ top-tier applications and implemented an enterprise content management system.
+Accomplished IT Professional with 24+ years of experience leading enterprise IT projects and teams. Skilled in deploying IT infrastructure, cloud solutions, and managing global operations. Experti[...]
 
-I have held positions such as Systems Engineer, Tech Lead, Manager, Principal Cloud Architect, and Chapter Lead, and have extensive experience in platform automation, cloud integration, and cloud migrations. As a Chapter Lead at Commonwealth Bank of Australia, I lead a team of over 70 and oversee the Cloud Integration crew, which includes Vault, Certificate Management, Public Container as a Service, Temporal, and Cloud Control Platforms. I provide technical leadership to ensure these platforms are scalable, reliable, and secure.
+I have held positions such as Systems Engineer, Tech Lead, Manager, Principal Cloud Architect, and Chapter Lead, and have extensive experience in platform automation, cloud integration, and cloud [...]
 
 ---
 
