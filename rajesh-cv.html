@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajesh Kriplani - Infographic CV</title>
+    <style>
+        :root {
+            --primary: #0B1B3D;
+            --secondary: #F4F6F9;
+            --accent: #00A8E8;
+            --text-dark: #2F3E46;
+            --text-light: #6C757D;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #E9ECEF;
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 40px 0;
+        }
+
+        .page {
+            background: #fff;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            background-color: var(--secondary);
+            border-right: 1px solid #E2E8F0;
+            padding: 30px 20px;
+        }
+
+        .profile-img-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* restored circular photo */
+            object-fit: cover;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            color: var(--primary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .metric-card {
+            background: #fff;
+            padding: 12px;
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .metric-num {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 11px;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        .skill-group {
+            margin-bottom: 15px;
+        }
+
+        .skill-group-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .pill {
+            background: #E2E8F0;
+            color: var(--primary);
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 30px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: var(--primary);
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            color: var(--accent);
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 2px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #E2E8F0;
+            margin-left: 15px;
+        }
+
+        .summary-text {
+            font-size: 13.5px;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        /* Timeline styles */
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 35px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: #E2E8F0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -19px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid #fff;
+        }
+
+        .job-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .company-date {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .job-bullets {
+            list-style-type: square;
+            padding-left: 15px;
+            font-size: 12.5px;
+            color: var(--text-dark);
+        }
+
+        .job-bullets li {
+            margin-bottom: 4px;
+        }
+
+        /* Projects Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .project-card {
+            background: var(--secondary);
+            padding: 15px;
+            border-radius: 6px;
+            border-top: 3px solid var(--primary);
+        }
+
+        .project-card h4 {
+            font-size: 13px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            font-size: 11.5px;
+            color: var(--text-dark);
+        }
+
+        .edu-item h4 {
+            font-size: 14px;
+            color: var(--primary);
+        }
+        .edu-item p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        @media print {
+            body { padding: 0; background: #fff; }
+            .page { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        <div class="profile-img-container">
+            <!-- Add image link inside src if desired -->
+            <img class="profile-img" src="rajesh-photo.jpg" alt="Rajesh Kriplani">
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">Impact Metrics</h3>
+            <div class="metric-card">
+                <span class="metric-num">24+</span>
+                <span class="metric-label">Years Leadership</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-num">70+</span>
+                <span class="metric-label">Engineers Managed</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-num">160+</span>
+                <span class="metric-label">Apps Supported</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-num">40%</span>
+                <span class="metric-label">Faster Cloud Delivery</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">Core Expertise</h3>
+            
+            <div class="skill-group">
+                <div class="skill-group-title">Cloud Platforms</div>
+                <div class="pill-container">
+                    <span class="pill">AWS IaaS</span>
+                    <span class="pill">Azure</span>
+                    <span class="pill">OpenShift</span>
+                    <span class="pill">PCF PaaS</span>
+                    <span class="pill">Kubernetes</span>
+                    <span class="pill">AWS MSK</span>
+                    <span class="pill">Confluent Kafka</span>
+                    <span class="pill">Temporal</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">DevSecOps & IaC</div>
+                <div class="pill-container">
+                    <span class="pill">Terraform</span>
+                    <span class="pill">CloudFormation</span>
+                    <span class="pill">Jenkins Core</span>
+                    <span class="pill">GitHub Actions</span>
+                    <span class="pill">Python</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Observability</div>
+                <div class="pill-container">
+                    <span class="pill">Dynatrace</span>
+                    <span class="pill">Splunk</span>
+                    <span class="pill">Datadog</span>
+                    <span class="pill">Prometheus</span>
+                    <span class="pill">Grafana</span>
+                    <span class="pill">Observe</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Security & Infra</div>
+                <div class="pill-container">
+                    <span class="pill">DevSecOps</span>
+                    <span class="pill">Zero Trust</span>
+                    <span class="pill">SiteMinder</span>
+                    <span class="pill">PingFederate</span>
+                    <span class="pill">Venafi</span>
+                    <span class="pill">Hashicorp Vault</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">AI Tools</div>
+                <div class="pill-container" style="margin-top:6px;">
+                    <span class="pill" title="ChatGPT">ChatGPT</span>
+                    <span class="pill" title="GPT-4o">GPT-4o</span>
+                    <span class="pill" title="Claude">Claude</span>
+                    <span class="pill" title="Github copilot">Github copilot</span>
+                     <span class="pill" title="Github copilot">Roo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN COLUMN -->
+    <div class="main-content">
+        <header>
+            <h1>Rajesh Kriplani</h1>
+            <div class="subtitle">Chapter Lead | Director | Principal Cloud Architect</div>
+            <div class="contact-info">
+                <div>📍 Bangalore, India</div>
+                <div>📞 +91-9972061878</div>
+                <div>📧 rkriplani76@rediffmail.com</div>
+                <div><a href="http://www.linkedin.com/in/rajesh-kriplani" target="_blank">www.linkedin.com/in/rajesh-kriplani</a></div>
+            </div>
+        </header>
+
+        <h3 class="summary-text">Profile Summary</h3>
+        <p class="summary-text">Accomplished IT Professional with 24+ years of experience leading enterprise IT projects and teams. Skilled in deploying IT infrastructure, cloud solutions, and managing global operations. Expertise spans IT services, architecture, people management, stakeholder engagement, open-source adoption, negotiation, and achieving results. Led cloud migration initiatives, developed performance testing and configuration management tools, drove container strategy, and completed data centre migration for the Core Technology Group in 18 months. Managed a team supporting 160+ top-tier applications and implemented an enterprise content management system.</p>
+        
+        <p class="summary-text">I have held positions such as Systems Engineer, Tech Lead, Manager, Principal Cloud Architect, and Chapter Lead, and have extensive experience in platform automation, cloud integration, and cloud migrations. As a Chapter Lead at Commonwealth Bank of Australia, I lead a team of over 70 and oversee the Cloud Integration crew, which includes Vault, Certificate Management, Public Container as a Service, Temporal, and Cloud Control Platforms. I provide technical leadership to ensure these platforms are scalable, reliable, and secure.</p>
+        
+        <h3 class="section-title" style="margin-top:12px;">Key Leadership Skills</h3>
+        <ul class="job-bullets">
+            <li>Cloud Platform Strategy & Innovation</li>
+            <li>Enterprise Architecture (AWS & Azure)</li>
+            <li>Digital Transformation & Cloud Migration Programs</li>
+            <li>Budgeting & Cost Optimization</li>
+            <li>Infrastructure as Code (Terraform & CloudFormation)</li>
+            <li>High-Performance Team Leadership & Coaching</li>
+            <li>Vendor and Product Management</li>
+            <li>Governance, Security, and Compliance</li>
+            <li>Agile & DevSecOps Organizational Enablement</li>
+        </ul>
+
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="job-title">Chapter Lead — Cloud Integration</div>
+                <div class="company-date">Commonwealth Bank Australia • 03/2025 – Current</div>
+                <ul class="job-bullets">
+                    <li>Leading platform engineering across 6 squads.</li>
+                    <li>Key contributor to DevSecOps transformation.</li>
+                    <li>Delivered EventHub self-service capability in 4 months.</li>
+                    <li>Established India-wide cloud integration team.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Director — Cloud Platform Services</div>
+                <div class="company-date">Fidelity • 04/2021 – 03/2025</div>
+                <ul class="job-bullets">
+                    <li>Defined and executed a multi-year cloud transformation roadmap impacting 50+ enterprise systems.</li>
+                    <li>Directed platform engineering teams across regions to architect and maintain resilient hybrid cloud infrastructures.</li>
+                    <li>Led inner and open-source adoption through nano and strategic contributions; ran engineering showcases, AWS Jams & workshops.</li>
+                    <li>Champion for Kubernetes, serverless architectures and zero trust principles.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Principal Cloud Architect</div>
+                <div class="company-date">Fidelity • 04/2018 – 04/2021</div>
+                <ul class="job-bullets">
+                    <li>Led migration of mission-critical workloads from on-prem to AWS, achieving 40% faster service delivery.</li>
+                    <li>Designed cloud migration patterns and reusable components.</li>
+                    <li>Collaborated with cloud enablement teams to accelerate migrations and improve platform reliability.</li>
+                    <li>Mentored cross-functional teams on cloud best practices.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Architect</div>
+                <div class="company-date">Fidelity • 07/2014 – 04/2018</div>
+                <ul class="job-bullets">
+                    <li>Reviewed application architectures to align with the organisation Technology Blueprint and Roadmap.</li>
+                    <li>Developed Data Centre Migration Strategy and managed technology lifecycles for applications and tools.</li>
+                    <li>Designed and executed Application Performance Monitoring for critical applications.</li>
+                    <li>Participated in migrations to Pivotal Cloud Foundry to increase developer productivity.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Project Lead</div>
+                <div class="company-date">Fidelity • 07/2010 – 07/2014</div>
+                <ul class="job-bullets">
+                    <li>Managed multiple middleware projects with complex architectures (Apache, WebSphere, MQ, Autonomy, Documentum, IIS, Tomcat, SiteMinder).</li>
+                    <li>Led a team of 6 to provide end-to-end middleware support for 500+ applications.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Senior Systems Engineer</div>
+                <div class="company-date">Fidelity • 09/2006 – 07/2010</div>
+                <ul class="job-bullets">
+                    <li>Built infrastructure for EDMS (enterprise content management) and performed performance testing and tuning.</li>
+                    <li>Managed web hosting support for internal and external customers.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Systems Engineer</div>
+                <div class="company-date">Hewlett Packard • 08/2005 – 08/2006</div>
+                <ul class="job-bullets">
+                    <li>Managed complex web hosting and middleware services for internal and external customers.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Technical Assistant Engineer — CMC (Resident Engineer at ISRO)</div>
+                <div class="company-date">06/1999 – 06/2005</div>
+                <ul class="job-bullets">
+                    <li>Maintained and managed IRIX, Octane and VAX/VMS infrastructure at ISRO as a resident engineer.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-title">Apprentice</div>
+                <div class="company-date">04/1998 – 03/1999</div>
+                <ul class="job-bullets">
+                    <li>Designed and implemented network infrastructure across ISRO.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="section-title">Notable Innovation Projects</h3>
+        <div class="project-grid">
+            <div class="project-card">
+                <h4>EventHub Platform Automation</h4>
+                <p>Transformed streaming onboarding into an on-demand self-service ecosystem using Observe and Venafi.</p>
+            </div>
+            <div class="project-card">
+                <h4>API Compliance Engine</h4>
+                <p>Designed a rule-based OpenAPI Specification scoring algorithm matching risk indices.</p>
+            </div>
+            <div class="project-card">
+                <h4>Performance Testing (PTaaS)</h4>
+                <p>Standardized stress testing by provisioning scalable JMeter clusters natively on Kubernetes.</p>
+            </div>
+        </div>
+
+        <h3 class="section-title">Education</h3>
+        <div class="edu-item">
+            <h4>Post HSC Diploma in Computer Engineering</h4>
+            <p>Vallabh Vidyanagar Anand, Gujarat, India</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
